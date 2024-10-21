@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  
+    <header>
+        <div class="banner-gris-header">
+            <p>Envios gratis apartir $80.000</p>
+        </div>
+        <div class="cont-header-nav">
+            <div class="cont-logo">
+              <img src="Imagenes/New-Balance-logo-1.jpg" alt="Logo">
+            </div>
+            <nav class="nav-menu-web">
+                <ul>
+                    <li>
+                    <a href="#">Incio</a>
+                    <a href="#">Tienda</a>
+                    <a href="#">Contactos</a>
+                    <a href="#">Ayuda</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cont-input-buscar">
+             <input class="input" type="text" placeholder="Buscar">
+             <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+   
+            <div class="carrito-iniciar-sesion">
+              <p class="registrate">Registrate</p>
+              <p class="inciar-sesion">Inciar Sesion</p>
+              <i class="fa-solid fa-cart-shopping" id="abrir-carrito"></i>
+              <span class="contador-carrito" id="contador">0</span>
+              <i class="fa-solid fa-bars" id="abrir-menu"></i>
+            </div>
+        </div>
+        <div class="menu-responsive menu-desplegable">
+            <button class="cerrar-menu-responsive"  id="cerrar-menu">Cerrar Menu</button>
+            <h3>Menu desplegable</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </div>
+    </header>
+    <aside>
+        <div class="cont-input-buscar">
+            <input class="input-buscar" type="text" placeholder="Buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="div-aside">
+            <div class="cont-select-recomendados">
+                <select name="Recomendados" class="select-recomendados">
+                    
+                    <option value="Recomendados">Recomendados</option>
+                    <option value="XL">XL</option>
+                    <option value="M">M</option>
+                      
+                </select>
+            </div>
+            <div class="cont-span-quitarflitro">
+                <span>Quitar filtros</span>
+            </div>
+            
+        </div>
+        <div class="cont-ver-filtros abrir-filtro">
+            <p class="ver-filtro">Ver filtros</p>
+            <i class="fa-solid fa-arrow-down-long"></i>
+        </div>
+        <div class="contenedor-filtros cont-filtros-ocultos">
+            <div class="cont-talles">
+               <div class="titulo-filtro">
+                 <span class="span-talle">Talles</span>
+                 <span class="boton-talles-span-signo-mas">+</span>
+               </div>
+               <div class="cont-filtros cont-filtros-ocultos-talles">
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">38</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">39</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">40</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">41</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">42</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">43</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">44</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">45</a></div>
+               </div>
+            </div>
+            <div class="cont-genero">
+            
+                <div class="titulo-filtro">
+                    <span class="span-genero">Genero</span>
+                    <span class="boton-genero-span-signo-mas">+</span>
+                </div>
+                <div class="cont-filtros cont-filtros-ocultos-genero">
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Hombre</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Mujer</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Niños</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Unisex</a></div>
+               </div>
+            </div>  
+            <div class="cont-precio">
+            
+                <div class="titulo-filtro">  
+                    <span class="span-precio">Precio</span>
+                    <span class="boton-precio-span-signo-mas">+</span>
+                </div>
+                <div class="cont-filtros cont-filtros-ocultos-precio">
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Desde $30.000 a $80.000</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Desde $80.000 a $150.000</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Desde $150.000 a $200.000</a></div>
+                    <div class="checkbox-filtros"><input type="checkbox"><a href="#">Desde $200.000 a $400.000</a></div>
+               </div>
+             
+            </div>
+        </div>
+      
+    </aside>
+    <main>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="Imagenes/zapatilla-pumas-dos.jpg" alt="Zapatillas Pumas Unisex">
+                <p>Zapatillas Pumas Unisex</p>
+                <button class="agregar-carrito" data-product="Pumas Unisex" data-price="40000">Agregar al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="Imagenes/zapatillas-adidas.jpg" alt="Adidas Classic">
+                <p>Adidas Classic</p>
+                <button class="agregar-carrito" data-product="Adidas Classic" data-price="80000">Agregar al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="Imagenes/zapatilla-pumas-dos.jpg" alt="Pumas Urbanas">
+                <p>Pumas Urbanas</p>
+                <button class="agregar-carrito" data-product="Pumas Urbanas" data-price="100000">Agregar al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="Imagenes/zapatillas-adidas.jpg" alt="Nike running">
+                <p>Nike running</p>
+                <button class="agregar-carrito" data-product="Producto 4" data-price="180000">Agregar al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="Imagenes/zapatilla-pumas-dos.jpg" alt="Pumas Urbanas">
+                <p>Pumas Urbanas</p>
+                <button class="agregar-carrito" data-product="Pumas Urbanas" data-price="100000">Agregar al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="Imagenes/zapatillas-adidas.jpg" alt="Nike running">
+                <p>Nike running</p>
+                <button class="agregar-carrito" data-product="Producto 4" data-price="180000">Agregar al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="Imagenes/zapatillas-adidas.jpg" alt="Nike running">
+                <p>Nike running</p>
+                <button class="agregar-carrito" data-product="Producto 4" data-price="180000">Agregar al Carrito</button>
+            </div>
+            <div class="product-card">
+                <img src="Imagenes/zapatillas-adidas.jpg" alt="Nike running">
+                <p>Nike running</p>
+                <button class="agregar-carrito" data-product="Producto 4" data-price="180000">Agregar al Carrito</button>
+            </div>
+       
+        </div>
+    
+        <div id="cart-container" class="cart-container hidden">
+            <button id="close-cart">Cerrar Carrito</button>
+            <h3>Carrito de Compras</h3>
+            <div id="cart" class="cart"></div>
+            <div id="cart-total" class="cart-total">Total: $0.00</div>
+        </div>
+    
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una tienda comprometida con ofrecer los mejores productos de calidad y un excelente servicio al cliente.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Enlaces Útiles</h2>
+                <ul>
+                    <li><a href="##">Inicio</a></li>
+                    <li><a href="##">Tienda</a></li>
+                    <li><a href="##">Contacto</a></li>
+                    <li><a href="##">Ayuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p><i class="fas fa-phone"></i> +123 456 789</p>
+                <p><i class="fas fa-envelope"></i> correo@ejemplo.com</p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+    <script src="menuResponsive.js"></script>
+    <script src="aside.js"></script>
+</body>
+</html>
